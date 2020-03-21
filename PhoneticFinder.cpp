@@ -8,32 +8,10 @@ using namespace std;
 namespace phonetic {
 	string find(string text, string word) {
         int count=0;
-        for (int i = 0; i < text.length(); i++)
-        {
-            if(text[i]==' '){
-                count++;
-            }
-        }
+        string* temp=buildStrArr(text,&count);
 
-        string temp[count+1];
-        count=0;
-        int k=0;
-        for(int i=0;i<text.length();i++){
-            if(text[i]!=' '){
-                count++;
-            }
-            else {
-                temp[k]=text.substr(i-count,count);
-                count=0;
-                k++;
-            }
-            if(i==text.length()-1){
-                temp[k]=text.substr(i-count+1,count+1);
-                k++;
-            }
-        }
-        
-	    for (string a:temp){
+	    for (int i=0;i<count;i++){
+            string a=temp[i];
             if(a.length()==word.length()){
                 int k=0;
                 while(k<a.length()){
@@ -114,14 +92,46 @@ namespace phonetic {
                     }
                 }
                 if(k==word.length()){
+                    delete[] temp;
                     return a;
                 }
 	        }
         }
+        delete[] temp;
         throw std::invalid_argument("the word "+word+" dont exist");
     }
     
+    string* buildStrArr(string text,int* n){
+        int count=0;
+        for (int i = 0; i < text.length(); i++)
+        {
+            if(text[i]==' '){
+                count++;
+            }
+        }
+
+        string* temp=new string[count+1];
+        *n=count+1;
+        count=0;
+        int k=0;
+        for(int i=0;i<text.length();i++){
+            if(text[i]!=' '){
+                count++;
+            }
+            else {
+                temp[k]=text.substr(i-count,count);
+                count=0;
+                k++;
+            }
+            if(i==text.length()-1){
+                temp[k]=text.substr(i-count+1,count+1);
+                k++;
+            }
+        }
+        return temp;
+    }  
 }
+
 
 
 
