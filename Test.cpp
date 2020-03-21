@@ -14,6 +14,10 @@ TEST_CASE("find word mistakes") {
     CHECK(find("BiG","BIG")==string("BiG"));
     CHECK(find("memory","memuri")==string("memory"));
     CHECK(find("Isolation","izoladyun")==string("Isolation"));
+    CHECK(find("Vavo","vavo")==string("Vavo"));
+    CHECK(find("SnaKe","snake")==string("SnaKe"));
+    CHECK(find("ies","yes")==string("ies"));
+    CHECK(find("Out","out")==string("Out"));
 }
 
 TEST_CASE("Check long words") {
@@ -28,6 +32,22 @@ TEST_CASE("Check long words") {
 TEST_CASE("Checking short words") {
     CHECK(find("v","w") == string("v"));
     CHECK(find("a","A") == string("a"));
+    CHECK(find("b","f") == string("b"));
+    CHECK(find("b","B") == string("b"));
+    CHECK(find("b","p") == string("b"));
+    CHECK(find("P","F") == string("P"));
+    CHECK(find("i","y") == string("i"));
+    CHECK(find("Y","I") == string("Y"));
+    CHECK(find("s","z") == string("s"));
+    CHECK(find("S","s") == string("S"));
+    CHECK(find("q","c") == string("q"));
+    CHECK(find("Q","K") == string("Q"));
+    CHECK(find("k","c") == string("k"));
+    CHECK(find("K","Q") == string("K"));
+    CHECK(find("g","j") == string("g"));
+    CHECK(find("G","g") == string("G"));
+    CHECK(find("G","J") == string("G"));
+    CHECK(find("J","G") == string("J"));
 }
 
 TEST_CASE("Long sentence short words") {
@@ -35,6 +55,10 @@ TEST_CASE("Long sentence short words") {
     CHECK(find("v s d g r n s a","t") == string("d"));
     CHECK(find("v i d o r n s a","z") == string("s"));
     CHECK(find("v i d o r n s a","y") == string("i"));
+    CHECK(find("v s d g r n s a","A") == string("a"));
+    CHECK(find("v s d g r n s a","S") == string("s"));
+    CHECK(find("v i d q r n s a","Q") == string("q"));
+    CHECK(find("v i d o r n s a","I") == string("i"));
 }
 
 TEST_CASE("Test replacement of p , b and f") {

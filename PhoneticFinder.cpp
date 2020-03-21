@@ -6,7 +6,7 @@
 using namespace std;
 
 namespace phonetic {
-	string find(string text, string word) {
+string find(string text, string word) {
         int count=0;
         string* temp=buildStrArr(text,&count);
 
@@ -18,64 +18,64 @@ namespace phonetic {
                     if(a[k]==word[k]+32||a[k]==word[k]-32){
                         k++;
                     }
-                    else if(a[k]=='v'||a[k]=='w'){
-                        if(word[k]=='v'||word[k]=='w'){
+                    else if(a[k]=='v'||a[k]=='w'||a[k]=='V'||a[k]=='W'){
+                        if(word[k]=='v'||word[k]=='w'||word[k]=='V'||word[k]=='W'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='b'||a[k]=='f'||a[k]=='p'){
-                        if(word[k]=='b'||word[k]=='f'||word[k]=='p'){
+                    else if(a[k]=='b'||a[k]=='f'||a[k]=='p'||a[k]=='B'||a[k]=='F'||a[k]=='P'){
+                        if(word[k]=='b'||word[k]=='f'||word[k]=='p'||word[k]=='B'||word[k]=='F'||word[k]=='P'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='g'||a[k]=='j'){
-                        if(word[k]=='g'||word[k]=='j'){
+                    else if(a[k]=='g'||a[k]=='j'||a[k]=='G'||a[k]=='J'){
+                        if(word[k]=='g'||word[k]=='j'||word[k]=='G'||word[k]=='J'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='c'||a[k]=='k'||a[k]=='q'){
-                        if(word[k]=='c'||word[k]=='k'||word[k]=='q'){
+                    else if(a[k]=='c'||a[k]=='k'||a[k]=='q'||a[k]=='C'||a[k]=='K'||a[k]=='Q'){
+                        if(word[k]=='c'||word[k]=='k'||word[k]=='q'||word[k]=='C'||word[k]=='K'||word[k]=='Q'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='s'||a[k]=='z'){
-                        if(word[k]=='s'||word[k]=='z'){
+                    else if(a[k]=='s'||a[k]=='z'||a[k]=='S'||a[k]=='Z'){
+                        if(word[k]=='s'||word[k]=='z'||word[k]=='S'||word[k]=='Z'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='d'||a[k]=='t'){
-                        if(word[k]=='d'||word[k]=='t'){
+                    else if(a[k]=='d'||a[k]=='t'||a[k]=='D'||a[k]=='T'){
+                        if(word[k]=='d'||word[k]=='t'||word[k]=='D'||word[k]=='T'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='o'||a[k]=='u'){
-                        if(word[k]=='o'||word[k]=='u'){
+                    else if(a[k]=='o'||a[k]=='u'||a[k]=='O'||a[k]=='U'){
+                        if(word[k]=='o'||word[k]=='u'||word[k]=='O'||word[k]=='U'){
                             k++;
                         }
                         else{
                             break;
                         }
                     }
-                    else if(a[k]=='i'||a[k]=='y'){
-                        if(word[k]=='i'||word[k]=='y'){
+                    else if(a[k]=='i'||a[k]=='y'||a[k]=='I'||a[k]=='Y'){
+                        if(word[k]=='i'||word[k]=='y'||word[k]=='I'||word[k]=='Y'){
                             k++;
                         }
                         else{
