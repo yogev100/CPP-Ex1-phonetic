@@ -1,3 +1,11 @@
+/**
+ * PhoneticFinder file that contains the impelement of PhoneticFinder.hpp.
+ * 
+ *  * * AUTHORS: <Yogev Hassid, Ron Azu and Omri Yonatani>
+
+ * 
+ * Date: 2020-03
+ */
 #include "PhoneticFinder.hpp"
 #include <iostream>
 #include <stdexcept>

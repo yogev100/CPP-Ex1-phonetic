@@ -1,6 +1,9 @@
 /**
  * Demo program for Gimatriya calculation.
  * 
+ *  * * AUTHORS: <Yogev Hassid, Ron Azu and Omri Yonatani>
+
+ * 
  * Date: 2020-02
  */
 

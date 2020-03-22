@@ -6,3 +6,4 @@ namespace phonetic{
     std::string* buildStrArr(std::string text,int* n);
 
 }
+

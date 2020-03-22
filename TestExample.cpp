@@ -4,6 +4,8 @@
  * 
  * IMPORTANT: Please write more tests - the tests here are only for example and are not complete.
  * 
+ * * AUTHORS: <Yogev Hassid, Ron Azu and Omri Yonatani>
+ * 
  * Date: 2020-02
  */
 

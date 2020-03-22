@@ -1,3 +1,13 @@
+
+/**
+ * Test file that contains about 100 different checks of the main funciton - 'find' that exist inside
+ * the namespace 'phonetic'.
+ * 
+ *  * * AUTHORS: <Yogev Hassid, Ron Azu and Omri Yonatani>
+
+ * 
+ * Date: 2020-03
+ */
 #include "PhoneticFinder.hpp"
 #include "doctest.h"
 using namespace phonetic;
