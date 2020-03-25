@@ -189,3 +189,18 @@ TEST_CASE("Test replacement of lower-case and upper-case") {
     CHECK(find(text3, "ILl") == string("Ill")); 
     CHECK(find(text3, "iLL") == string("Ill")); 
 }
+
+TEST_CASE("cought exceptions"){
+    string text = "I Dont Want To GO";
+    string text2 = "MORE CHECK FOR THIS";
+    string text3 = "cpp or c plus pluz or java";
+    CHECK_THROWS(find(text, "wan"));
+    CHECK_THROWS(find(text, "togo"));
+    CHECK_THROWS(find(text, "don't"));
+    CHECK_THROWS(find(text2, "fir"));
+    CHECK_THROWS(find(text2, "thiE"));
+    CHECK_THROWS(find(text2, " "));
+    CHECK_THROWS(find(text3, "cpc"));
+    CHECK_THROWS(find(text3, "pcp"));
+    CHECK_THROWS(find(text3, "hava"));
+}
