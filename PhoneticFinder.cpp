@@ -14,7 +14,10 @@
 using namespace std;
 
 namespace phonetic {
-string find(string text, string word) {
+    string find(string text, string word) {
+        if(text.length()==0){
+            throw std::invalid_argument("there is no text\n");
+        }
         int count=0;
         string* temp=buildStrArr(text,&count);
 
